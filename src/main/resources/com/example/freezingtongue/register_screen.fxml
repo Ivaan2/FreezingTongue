@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.RegisterScreen">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="300.0" prefWidth="300.0">
+         <children>
+            <Label layoutX="119.0" layoutY="15.0" prefHeight="28.0" prefWidth="59.0" text="Label" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
