@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.ConfigHelados">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="600.0" style="-fx-background-color: pink;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="150.0" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: #fde992;" text="Elige el sabor" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="0" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: #fde992;" text="Elige el tamaño" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="450.0" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: #fde992;" text="Elige un topping" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <!--TAMAÑO-->
+            <Button fx:id="btnTamPeque" layoutX="100.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Pequeño" textFill="#fde992" />
+            <Button fx:id="btnTamMediano" layoutX="250.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Mediano" textFill="#fde992" />
+            <Button fx:id="btnTamGrande" layoutX="400.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Grande" textFill="#fde992" />
+
+            <!--SABORES-->
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="100.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnSabFresa" layoutX="100.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Fresa" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="250.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnSabVainilla" layoutX="250.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Vainilla" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="400.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnSabChocolate" layoutX="400.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Chocolate" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="100.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnSabTurron" layoutX="100.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Turrón" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="250.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnSabNata" layoutX="250.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Nata" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="400.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnSabStra" layoutX="400.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Stracciatella" textFill="#fde992" />
+
+            <!--TOPPING-->
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="100.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnTopGalleta" layoutX="100.0" layoutY="580.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Galleta" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="250.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnTopOreo" layoutX="250.0" layoutY="580.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Oreo" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="400.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnTopLacasitos" layoutX="400.0" layoutY="580.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #8a721b;" text="Lacasitos" textFill="#fde992" />
+
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
