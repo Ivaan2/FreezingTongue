@@ -4,7 +4,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="splashScreenPane" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #ededed;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.controllers.SplashScreen">
+<AnchorPane fx:id="splashScreenPane" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #ededed;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.controllers.SplashScreenController">
    <children>
       <ProgressBar fx:id="progressBar" layoutY="377.0" prefHeight="18.0" prefWidth="600.0" progress="0.0" />
       <ImageView fx:id="fondo" fitHeight="354.0" fitWidth="600.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">

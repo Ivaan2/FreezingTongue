@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SplashScreen implements Initializable {
+public class SplashScreenController implements Initializable {
 
     @FXML
     private AnchorPane splashScreenPane;
