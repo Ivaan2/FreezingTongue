@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="300.0" prefWidth="300.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.LoginController">
+<VBox alignment="CENTER" prefHeight="300.0" prefWidth="300.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.controllers.LoginController">
 
    <Pane prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #fcf5c7;">
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="14.0" prefHeight="27.0" prefWidth="86.0" style="-fx-background-color: #e8cb9a; -fx-border-color: #d0ab7a;" text="LOGIN" textFill="#8a721b">

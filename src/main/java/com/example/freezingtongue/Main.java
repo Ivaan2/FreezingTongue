@@ -14,13 +14,10 @@ import java.net.URL;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        //URL url = new File("src/main/java/com/example/freezingtongue/resources/splashscreen.fxml").toURI().toURL();
-        URL url = new File("src/main/java/com/example/freezingtongue/resources/login_screen.fxml").toURI().toURL();
+        URL url = new File("src/main/java/com/example/freezingtongue/resources/splashscreen.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
 
-        //Scene scene = new Scene(root,600,400);
-        Scene scene = new Scene(root,300,300);
-        stage.setTitle("Splash Screen");
+        Scene scene = new Scene(root,600,400);
         stage.setResizable(false);
         stage.setScene(scene);
         stage.initStyle(StageStyle.TRANSPARENT);
