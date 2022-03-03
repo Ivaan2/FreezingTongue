@@ -25,9 +25,9 @@
                </font>
             </Label>
             <!--TAMAÑO-->
-            <Button layoutX="100.0" layoutY="70.0" mnemonicParsing="false" onAction="#btnTamGrande" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Pequeño" textFill="#fde992" />
+            <Button layoutX="100.0" layoutY="70.0" mnemonicParsing="false" onAction="#btnTamPeque" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Pequeño" textFill="#fde992" />
             <Button layoutX="250.0" layoutY="58.0" mnemonicParsing="false" onAction="#btnTamMediano" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Mediano" textFill="#fde992" />
-            <Button layoutX="400.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnTamPeque" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Grande" textFill="#fde992" />
+            <Button layoutX="400.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnTamGrande" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Grande" textFill="#fde992" />
 
             <!--SABORES-->
             <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="100.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
