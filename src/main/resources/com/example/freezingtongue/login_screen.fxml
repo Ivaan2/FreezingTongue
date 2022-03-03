@@ -36,6 +36,6 @@
             <Font name="System Bold Italic" size="10.0" />
          </font>
       </Button>
-      <Button fx:id="bLogin" layoutX="131.0" layoutY="190.0" mnemonicParsing="false" onAction="#Login" style="-fx-background-color: #e8cb9a; -fx-border-color: #d0ab7a;" text="Entrar" />
+      <Button fx:id="bLogin" layoutX="131.0" layoutY="190.0" mnemonicParsing="false" style="-fx-background-color: #e8cb9a; -fx-border-color: #d0ab7a;" text="Entrar" />
    </Pane>
 </VBox>
