@@ -4,7 +4,6 @@ import com.example.freezingtongue.ConexionBBDD;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -61,7 +60,6 @@ public class ResetController {
         boolean commit = false;
         String sql = "UPDATE usuario SET contrasena = ? WHERE idUsuario = ?";
         Connection con = ConexionBBDD.openConnection();
-        ResultSet resultSet;
 
         try {
             PreparedStatement st = con.prepareStatement(sql);

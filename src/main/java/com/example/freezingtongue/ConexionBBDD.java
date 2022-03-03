@@ -11,11 +11,9 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Objects;
 
 public class ConexionBBDD {
     public ConexionBBDD() {
@@ -38,6 +36,7 @@ public class ConexionBBDD {
     public static void mostrarMenuAdministrador(Event event, String ruta) {
         Stage appStage = null;
         Scene scene = null;
+
         try {
             Parent root = (Parent)FXMLLoader.load(new File("src/main/java/com/example/freezingtongue/resources/" + ruta + ".fxml").toURI().toURL());
             scene = new Scene(root);
@@ -50,8 +49,12 @@ public class ConexionBBDD {
             appStage.setY(100);
             appStage.setX(500);
         }
+        else if (ruta.equals("orderResume")){
+            appStage.setY(600);
+        }
         appStage.setScene(scene);
         appStage.toFront();
+        appStage.setResizable(false);
         appStage.show();
     }
 

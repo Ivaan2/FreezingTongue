@@ -61,6 +61,7 @@ public class SplashScreenController implements Initializable {
                         Scene scene = new Scene(root);
 
                         nuevaVentana.setScene(scene);
+                        nuevaVentana.setResizable(false);
                         nuevaVentana.show();
 
                         splashScreenPane.getScene().getWindow().hide();

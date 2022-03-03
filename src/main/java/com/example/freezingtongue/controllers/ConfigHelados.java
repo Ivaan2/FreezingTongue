@@ -2,12 +2,11 @@ package com.example.freezingtongue.controllers;
 
 import com.example.freezingtongue.ConexionBBDD;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class ConfigHelados {
-    private String tamano, sabor, topping;
+    public static String tamano, sabor, topping;
 
     @FXML
     private Label tTamaño;
@@ -73,10 +72,10 @@ public class ConfigHelados {
     //BOTON PARA AÑADIR AL CARRITO/COMPRAR
     @FXML
     public void btnAddCarrito(ActionEvent event) {
-        String sql = "SELECT max(heladoId) from helado h;";
         tamano = tTamaño.getText();
         sabor = tSabor.getText();
         topping = tTopping.getText();
+
         ConexionBBDD.mostrarMenuAdministrador(event, "orderResume");
     }
 }
