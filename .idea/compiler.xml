@@ -13,4 +13,9 @@
       <module name="FreezingTongue" target="17" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="FreezingTongue" options="--add-exports javafx.graphics/com.sun.javafx.application=com.example.freezingtongue" />
+    </option>
+  </component>
 </project>
