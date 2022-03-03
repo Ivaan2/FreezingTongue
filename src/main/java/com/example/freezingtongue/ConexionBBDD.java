@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -20,37 +21,52 @@ public class ConexionBBDD {
     public ConexionBBDD() {
     }
 
-    public static Connection openConnection(String database, String user, String pwd) {
+    public static Connection openConnection() {
         Connection con = null;
-
+        String database = "jdbc:mysql://localhost:3306/freezing_tongue";
+        String user = "root";
+        String pwd = "";
         try {
             con = DriverManager.getConnection(database, user, pwd);
-        } catch (SQLException var5) {
-            var5.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
         return con;
     }
 
     public static void mostrarMenuAdministrador(Event event, String ruta) {
+        Stage appStage = null;
+        Scene scene = null;
         try {
-            String rutafx = ruta + ".fxml";
-            Parent root = (Parent)FXMLLoader.load((URL)Objects.requireNonNull(ConexionBBDD.class.getResource(rutafx)));
-            Scene scene = new Scene(root);
-            Stage appStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            appStage.setScene(scene);
-            appStage.toFront();
-            appStage.show();
-        } catch (IOException var6) {
-            var6.printStackTrace();
-        }
+            Parent root = (Parent)FXMLLoader.load(new File("src/main/java/com/example/freezingtongue/resources/" + ruta + ".fxml").toURI().toURL());
+            scene = new Scene(root);
+            appStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(ruta.equals("config_helados")){
+            appStage.setY(100);
+            appStage.setX(500);
+        }
+        appStage.setScene(scene);
+        appStage.toFront();
+        appStage.show();
     }
 
     public static void mostrarAlertError(ActionEvent event, String msj) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setHeaderText((String)null);
         alert.setTitle("Error");
+        alert.setContentText(msj);
+        alert.showAndWait();
+    }
+
+    public static void mostrarAlert(ActionEvent event, String msj) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText((String)null);
+        alert.setTitle("Mensaje");
         alert.setContentText(msj);
         alert.showAndWait();
     }
