@@ -9,54 +9,72 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class LoginController {
-
-    private String username, password;
-    //ATRIBUTOS LOGIN
+    private String username;
+    private String password;
     @FXML
     private TextField login_user;
     @FXML
-    private TextField login_pwd;
-    @FXML
-    private Label login_msg;
+    private PasswordField login_pwd;
 
-
-    //METODOS LOGIN
-    @FXML
-    private void Login(ActionEvent event){
-        this.username = login_user.getText();
-        this.password = login_pwd.getText();
-        if(checkCredentials(username, password)){
-            //Si usuario y contraseña son correctos
-            //pasa a config_helados
-            ConexionBBDD.mostrarMenuAdministrador(event, "config_helados");
-        }else{
-            //usuario y contraseñas incorrectas
-            login_msg.setVisible(true);
-        }
+    public LoginController() {
     }
 
     @FXML
-    private void clicRegister(Event event){
+    private void Login(ActionEvent event) {
+        this.username = this.login_user.getText();
+        this.password = this.login_pwd.getText();
+        if (this.username.trim().equals("")) {
+            ConexionBBDD.mostrarAlertError(event, "Usuario vacío.");
+        } else if (this.password.trim().equals("")) {
+            ConexionBBDD.mostrarAlertError(event, "Introduzca una contraseña.");
+        } else if (this.checkCredentials(this.username, this.password)) {
+            ConexionBBDD.mostrarMenuAdministrador(event, "config_helados");
+        } else {
+            ConexionBBDD.mostrarAlertError(event, "Datos incorrectos..");
+        }
+
+    }
+
+    @FXML
+    private void clicRegister(Event event) {
         ConexionBBDD.mostrarMenuAdministrador(event, "register_screen");
     }
 
-
     @FXML
-    private void clicReset(Event event){
+    private void clicReset(Event event) {
         ConexionBBDD.mostrarMenuAdministrador(event, "reset_password");
     }
 
-    //METODOS GLOBALES
     private boolean checkCredentials(String username, String password) {
+        boolean great = false;
         String database = "jdbc:mysql://localhost:3306/freezing_tongue";
         String user = "root";
         String pwd = "";
+        String select = "SELECT nombre, contrasena FROM usuario WHERE nombre = ? and contrasena = ?;";
         Connection con = ConexionBBDD.openConnection(database, user, pwd);
-        return true;
+
+        try {
+            PreparedStatement pst = con.prepareStatement(select);
+            pst.setString(1, username);
+            pst.setString(2, password);
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+                great = true;
+                con.commit();
+            }
+        } catch (SQLException var11) {
+            var11.printStackTrace();
+        }
+
+        return great;
     }
 }
