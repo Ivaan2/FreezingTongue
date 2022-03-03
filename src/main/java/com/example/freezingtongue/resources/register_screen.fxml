@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.LoginController">
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.controllers.LoginController">
    <Pane prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #fcf5c7;">
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="14.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #e8cb9a; -fx-border-color: #d0ab7a;" text="REGISTRESE" textFill="#8a721b">
          <font>

@@ -1,5 +1,6 @@
-package com.example.freezingtongue;
+package com.example.freezingtongue.controllers;
 
+import com.example.freezingtongue.ConexionBBDD;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
