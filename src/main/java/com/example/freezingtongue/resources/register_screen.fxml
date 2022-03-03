@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.controllers.LoginController">
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.controllers.RegisterController">
    <Pane prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #fcf5c7;">
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="14.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #e8cb9a; -fx-border-color: #d0ab7a;" text="REGISTRESE" textFill="#8a721b">
          <font>
@@ -16,7 +16,7 @@
       <TextField fx:id="register_user" layoutX="125.0" layoutY="68.0" prefHeight="25.0" prefWidth="150.0" />
       <TextField fx:id="register_adress" layoutX="125.0" layoutY="145.0" prefHeight="25.0" prefWidth="150.0" />
       <Label fx:id="tAlerta" alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="216.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #b0323d;" text="Label" visible="false" />
-      <Button fx:id="register_button" layoutX="117.0" layoutY="256.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #b88b5c; -fx-border-color: #a06c3f;" text="Enviar" textFill="#ffdf12">
+      <Button fx:id="register_button" layoutX="58.0" layoutY="226.0" mnemonicParsing="false" onAction="#register" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #b88b5c; -fx-border-color: #a06c3f;" text="Enviar" textFill="#ffdf12">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
@@ -24,5 +24,10 @@
       <RadioButton fx:id="register_yes" layoutX="126.0" layoutY="184.0" mnemonicParsing="false" onAction="#register_suscription_yes" prefHeight="17.0" prefWidth="50.0" text="Sí" />
       <RadioButton fx:id="register_no" layoutX="183.0" layoutY="184.0" mnemonicParsing="false" onAction="#register_suscription_no" prefHeight="17.0" prefWidth="50.0" text="No" />
       <PasswordField fx:id="register_pwd" layoutX="125.0" layoutY="107.0" prefHeight="25.0" prefWidth="150.0" />
+      <Button fx:id="register_back" layoutX="167.0" layoutY="226.0" mnemonicParsing="false" onAction="#register_back" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #b88b5c; -fx-border-color: #a06c3f;" text="Volver" textFill="#ffdf12">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </Pane>
 </AnchorPane>
