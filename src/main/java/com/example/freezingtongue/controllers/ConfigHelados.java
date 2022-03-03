@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class ConfigHelados {
+    private String tamano, sabor, topping;
+
     @FXML
     private Label tTamaño;
     @FXML
@@ -68,8 +70,9 @@ public class ConfigHelados {
     //BOTON PARA AÑADIR AL CARRITO/COMPRAR
     @FXML
     protected void btnAddCarrito() {
-        tTamaño.getText();
-        tSabor.getText();
-        tTopping.getText();
+        String sql = "SELECT max(heladoId) from helado h;";
+        tamano = tTamaño.getText();
+        sabor = tSabor.getText();
+        topping = tTopping.getText();
     }
 }

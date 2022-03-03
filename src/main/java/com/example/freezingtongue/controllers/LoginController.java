@@ -13,7 +13,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class LoginController {
-    private String username;
+
+    public String username;
     private String password;
     @FXML
     private TextField login_user;
@@ -40,7 +41,7 @@ public class LoginController {
             if (logUser(event, this.username, this.password)) {
                 ConexionBBDD.mostrarMenuAdministrador(event, "config_helados");
             }else{
-                ConexionBBDD.mostrarMenuAdministrador(event, "No se ha detectado tu cuenta en la base de datos.");
+                ConexionBBDD.mostrarAlertError(event, "No se ha detectado tu cuenta en la base de datos.");
             }
         }
     }
