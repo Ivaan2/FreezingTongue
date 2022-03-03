@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freezingtongue.ConfigHelados">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="600.0" style="-fx-background-color: pink;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="150.0" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: #fde992;" text="Elige un sabor" textAlignment="RIGHT" textFill="#8a721b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="0" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: #fde992;" text="Elige un tamaño" textAlignment="RIGHT" textFill="#8a721b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="450.0" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: #fde992;" text="Elige un topping" textAlignment="RIGHT" textFill="#8a721b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <!--TAMAÑO-->
+            <Button onAction="#btnTamGrande" layoutX="100.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Pequeño" textFill="#fde992" />
+            <Button onAction="#btnTamMediano" layoutX="250.0" layoutY="58.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Mediano" textFill="#fde992" />
+            <Button onAction="#btnTamPeque" layoutX="400.0" layoutY="45.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Grande" textFill="#fde992" />
+
+            <!--SABORES-->
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="100.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+               <image><Image url="@images/fresa.jpg" /></image>
+            </ImageView>
+            <Button onAction="#btnSabFresa" layoutX="100.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Fresa" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="250.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+               <image><Image url="@images/vainilla.jpg" /></image>
+            </ImageView>
+            <Button onAction="#btnSabVainilla" layoutX="250.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Vainilla" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="400.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/choco.jpg" /></image>
+            </ImageView>
+            <Button onAction="#btnSabChocolate" layoutX="400.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Chocolate" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="100.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+               <image><Image url="@images/turron.jpg" /></image>
+            </ImageView>
+            <Button onAction="#btnSabTurron" layoutX="100.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Turrón" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="250.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+               <image><Image url="@images/nata.jpg" /></image>
+            </ImageView>
+            <Button onAction="#btnSabNata" layoutX="250.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Nata" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="400.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+               <image><Image url="@images/Stracciatella.jpg" /></image>
+            </ImageView>
+            <Button onAction="#btnSabStra" layoutX="400.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Stracciatella" textFill="#fde992" />
+
+            <!--TOPPING-->
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="100.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/galletas.jpg" />
+               </image></ImageView>
+            <Button onAction="#btnTopGalleta" layoutX="100.0" layoutY="580.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Galleta" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="250.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/oreo.jpg" />
+               </image></ImageView>
+            <Button onAction="#btnTopOreo" layoutX="250.0" layoutY="580.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Oreo" textFill="#fde992" />
+
+            <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="400.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/lacasitos.jpg" />
+               </image></ImageView>
+            <Button onAction="#btnTopLacasitos" layoutX="400.0" layoutY="580.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #8a721b;" text="Lacasitos" textFill="#fde992" />
+
+         </children>
+      </Pane>
+      <Pane layoutY="650.0" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: #fde992;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="0" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: brown;" text="Resumen del pedido" textAlignment="RIGHT" textFill="white">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="225.0" layoutY="30.0" prefHeight="25.0" prefWidth="90.0" text="Tamaño:" textFill="#8a721b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="225.0" layoutY="50.0" prefHeight="25.0" prefWidth="137.0" text="Sabor:" textFill="#8a721b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="225.0" layoutY="70.0" prefHeight="25.0" prefWidth="137.0" text="Topping:" textFill="#8a721b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="tTamaño" contentDisplay="CENTER" layoutX="300.0" layoutY="30.0" prefHeight="25.0" prefWidth="137.0" text="" textFill="#8a721b" />
+            <Label fx:id="tSabor" contentDisplay="CENTER" layoutX="300.0" layoutY="50.0" prefHeight="25.0" prefWidth="137.0" text="" textFill="#8a721b" />
+            <Label fx:id="tTopping" contentDisplay="CENTER" layoutX="300.0" layoutY="70.0" prefHeight="25.0" prefWidth="137.0" text="" textFill="#8a721b" />
+            <Button fx:id="btnAddCarrito" layoutX="225.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #8a721b;" text="Añadir al carrito" textFill="#fde992" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
